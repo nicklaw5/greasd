@@ -1,0 +1,13 @@
+.greasd {
+  text-align: center;
+  > h1 {
+    color: $blue;
+  }
+  > h5 {
+    font-weight: 900;
+  }
+  > ul {
+      list-style: none;
+      padding: 0;
+    }
+}

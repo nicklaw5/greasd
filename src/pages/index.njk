@@ -1,0 +1,15 @@
+{% extends "templates/layouts/master.njk" %}
+  {% block content %}
+
+    <div class="container greasd">
+      <h1 class="blue">{{ config.name }}</h1>
+      <h4>{{ config.description }}</h5>
+      <h5>Features:</h5>
+      <ul>
+        {% for feature in features %}
+        <li>{{ feature }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+  {% endblock %}
