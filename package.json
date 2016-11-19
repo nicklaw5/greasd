@@ -1,7 +1,7 @@
 {
   "name": "greasd",
   "version": "0.1.0",
-  "description": "A static HTML site generator greasing the wheels of you next project.",
+  "description": "A static HTML site generator greasing the wheels of your next project.",
   "repository": "git@github.com:nicklaw5/greasd.git",
   "author": "https://github.com/nicklaw5",
   "license": "MIT",

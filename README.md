@@ -1,5 +1,5 @@
 # greasd
-A static HTML site generator greasing the wheels of you next project.
+A static HTML site generator greasing the wheels of your next project.
 
 ### Features
 - Sass for CSS compiling
