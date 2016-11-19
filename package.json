@@ -4,6 +4,7 @@
   "description": "A static HTML site generator greasing the wheels of you next project.",
   "repository": "git@github.com:nicklaw5/greasd.git",
   "author": "https://github.com/nicklaw5",
+  "license": "MIT",
   "scripts": {
     "lint-js": "node_modules/.bin/eslint config.js gulpfile.js src/assets/js/**/*.js",
     "lint-sass": "node_modules/.bin/sass-lint src/assets/sass/**/*.scss -v -q"

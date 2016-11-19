@@ -16,7 +16,7 @@ $ cd greasd
 $ yarn install
 $ gulp
 ```
-All files and assets are generated to the `./dist` folder.
+All files and assets are generated to the `dist` folder in the project root.
 
 ### Other Commands
 ``` bash
@@ -27,5 +27,8 @@ $ yarn run lint-js
 $ yarn run lint-sass
 
 # Gulp Watch
-$ gulp && gulp watch
+$ gulp watch
 ```
+
+### License
+Distributed under the [MIT](https://github.com/nicklaw5/greasd/blob/master/LICENSE) license.
