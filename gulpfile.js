@@ -1,8 +1,9 @@
 const gulp = require('gulp')
 const argv = require('yargs').argv
 const del = require('del')
-const config = require('./config')
-const features = require('./features.js')
+const config = require('./bin/config')
+const features = require('./bin/features.js')
+const filePaths = require('./bin/file-paths.js')
 
 const plugins = require('gulp-load-plugins')({
   pattern: ['gulp-*', 'gulp.*'],
@@ -11,10 +12,12 @@ const plugins = require('gulp-load-plugins')({
 
 const src = './src'
 const dest = './dist'
+const nm = './node_modules'
 
 const data = {
   config,
   features,
+  paths: filePaths,
 }
 
 const paths = {
@@ -82,11 +85,13 @@ const scriptsTask = () => {
 
 const stylesTask = () => {
   const defaultNanoOptions = { safe: true }
+  const browserSupport = require(`${nm}/bootstrap/grunt/postcss`).autoprefixer
   cleanPath(`${paths.styles.dest}/*`)
 
   gulp.src(paths.styles.src)
     .pipe(plugins.sourcemaps.init())
     .pipe(plugins.sass())
+    .pipe(plugins.autoprefixer(browserSupport))
     .on('error', handleError)
     .pipe(plugins.concat('styles.css'))
     .pipe(argv.prod ? plugins.cssnano(defaultNanoOptions) : plugins.util.noop())

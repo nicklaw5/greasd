@@ -1,4 +1,5 @@
 module.exports = [
+  'Post CSS processing',
   'Sass for CSS compiling',
   'Supports asset minification',
   'Uses Nunjucks for templating',
